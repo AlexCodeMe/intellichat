@@ -3,10 +3,6 @@ import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import React, { ReactNode } from 'react'
 
-type Props = {
-  children: React.ReactNode
-}
-
 export default async function AuthLayout ({ children }: { children: ReactNode }) {
   const user = await currentUser()
   if (user) redirect('/')

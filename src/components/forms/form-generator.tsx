@@ -6,7 +6,7 @@ import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 
 type Props = {
-    type: 'text' | 'email' | 'password'
+  type: 'text' | 'email' | 'password'
   inputType: 'select' | 'input' | 'textarea'
   options?: { value: string; label: string; id: string }[]
   label?: string
@@ -20,7 +20,7 @@ type Props = {
 }
 
 export default function FormGenerator({
-    errors,
+  errors,
   inputType,
   name,
   placeholder,
@@ -117,5 +117,5 @@ export default function FormGenerator({
           />
         </Label>
       )
-    }
+  }
 }

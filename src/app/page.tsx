@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from 'html-react-parser'
 
-const pricingCards = [
+export const pricingCards = [
   {
     title: 'Standard',
     description: 'Perfect for trying out Corinna AI',

@@ -2,8 +2,34 @@
 
 import React from 'react'
 import FormGenerator from '../form-generator'
-import { USER_LOGIN_FORM } from '@/constants/forms'
 import { useFormContext } from 'react-hook-form'
+
+type UserRegistrationProps = {
+    id: string
+    type: 'email' | 'text' | 'password'
+    inputType: 'select' | 'input'
+    options?: { value: string; label: string; id: string }[]
+    label?: string
+    placeholder: string
+    name: string
+}
+
+const USER_LOGIN_FORM: UserRegistrationProps[] = [
+    {
+        id: '1',
+        inputType: 'input',
+        placeholder: 'Enter your email',
+        name: 'email',
+        type: 'email',
+    },
+    {
+        id: '2',
+        inputType: 'input',
+        placeholder: 'Password',
+        name: 'password',
+        type: 'password',
+    },
+]
 
 export default function LoginForm() {
     const {
